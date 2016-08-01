@@ -4,7 +4,9 @@ var Main = React.createClass({
 
 	render: function() {
 		return (
-			<div>MAIN COMP</div>
+			<div>
+				{this.props.children}
+			</div>
 		);
 	}
 
