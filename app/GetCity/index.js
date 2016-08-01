@@ -1,5 +1,5 @@
 var React = require('react');
-var GetCity = require('../components/GetCity');
+var GetCity = require('./GetCity');
 
 var GetCityContainer = React.createClass({
 

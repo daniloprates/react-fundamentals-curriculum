@@ -4,7 +4,7 @@ var GetCity = React.createClass({
 
 	render: function() {
 		return (
-			<div>GET CITY</div>
+			<div>GetCity YEAH</div>
 		);
 	}
 

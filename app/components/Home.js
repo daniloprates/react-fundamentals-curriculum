@@ -1,5 +1,5 @@
 var React = require('react');
-var GetCityContainer = require('../containers/GetCityContainer');
+var GetCity = require('../GetCity/');
 
 var styles = {
   container: {
@@ -25,7 +25,7 @@ var Home = function(props) {
 	return (
 		<div style={styles.container}>
 			<h1 style={styles.header}>Enter a City and a State</h1>
-			<GetCityContainer />
+			<GetCity />
 		</div>
 	);
 }
