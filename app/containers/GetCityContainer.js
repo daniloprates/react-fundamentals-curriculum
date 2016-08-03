@@ -1,9 +1,11 @@
 var React = require('react');
 var PropTypes = React.PropTypes;
 var GetCity = require('../components/GetCity');
-var GetCityHelper = require('../helpers/GetCityHelper');
 
 var GetCityContainer = React.createClass({
+	contextTypes: {
+		router: React.PropTypes.object.isRequired
+	},
 	getDefaultProps: function() {
 		return {
 			direction: 'column'
@@ -17,9 +19,10 @@ var GetCityContainer = React.createClass({
 			city: ''
 		}
 	},
-	handleSubmitCity: function() {
-		GetCityHelper.getForcast(this.state.city);
-		// console.log(this.state.city)
+	handleSubmitCity: function(e) {
+		e.preventDefault()
+		console.log(this.state.city)
+		this.context.router.push('/forecast/' + this.state.city)
 	},
 	handleUpdateCity: function(e) {
 		this.setState({
