@@ -25,18 +25,18 @@ var ForecastContainer = React.createClass({
 	apiRequest: function(city) {
 		getForcast(city)
 			.then(function (forecastData) {
-				console.log('forecastData ' , forecastData);
+				console.log('LOADED');
 				this.setState({
 					isLoading: false,
 					forecastData: forecastData,
 					cityName: forecastData.city.name
 				});
 			}.bind(this));
-		console.log(city);
 	},
 	render: function() {
 		return (
 			<Forecast
+				isLoading={this.state.isLoading}
 				cityName={this.state.cityName}
 				forecastData={this.state.forecastData}
 			 />

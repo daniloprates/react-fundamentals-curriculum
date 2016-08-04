@@ -12,7 +12,7 @@ var styles = {
     height: '100%',
     width: '100%'
   },
-  header: {
+  title: {
     fontSize: 45,
     color: '#fff',
     fontWeight: 100,
@@ -24,7 +24,7 @@ var styles = {
 var Home = function(props) {
 	return (
 		<div style={styles.container}>
-			<h1 style={styles.header}>Enter a City and a State</h1>
+			<h1 style={styles.title}>Enter a City and a State</h1>
 			<GetCityContainer />
 		</div>
 	);
