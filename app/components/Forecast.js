@@ -13,12 +13,19 @@ var styles = {
     fontSize: 45,
     fontWeight: 100,
   },
+  day: {
+  }
 }
 
-ForecastDayUI = function(props) {
+var ForecastDayUI = function(props) {
 	console.log('props ' , props);
 	return (
-		<div>DAY!</div>
+		<div style={styles.day}>
+			<h4>{props.weatherDay.weather[0].description}</h4>
+			<p>MIN: {props.weatherDay.temp.min}</p>
+			<p>MAX: {props.weatherDay.temp.max}</p>
+			<hr />
+		</div>
 	)
 
 }
@@ -38,7 +45,6 @@ var ForecastUI = function(props) {
 }
 
 var Forecast = function(props) {
-	console.log('props.isLoading ' , props.isLoading);
 	return props.isLoading === true
 		? <h2 style={styles.title}> Loading </h2>
 		: <ForecastUI city={props.cityName} forecast={props.forecastData} />
