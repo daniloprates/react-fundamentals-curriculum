@@ -14,7 +14,7 @@ var getCurrentWeather = function(city) {
 
 	return axios.get(url)
 	.then(function (result) {
-		console.log(result.data);
+		return result.data;
 	});
 
 }
@@ -25,7 +25,7 @@ var getForcast = function(city) {
 
 	return axios.get(url)
 	.then(function (result) {
-		console.log(result.data);
+		return result.data;
 	});
 
 }
