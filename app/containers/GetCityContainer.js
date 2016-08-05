@@ -15,6 +15,17 @@ var GetCityContainer = React.createClass({
 		direction: PropTypes.string
 	},
 	getInitialState: function () {
+
+		window.context = this.context;
+		window.props = this.props;
+
+	    // var currentPath = this.context.router.getCurrentPathname();
+	    console.log('this.context.router ' , this.context.router);
+	    // var currentParams = this.context.router.getCurrentParams();
+
+	    console.log('this.props ' , this.props);
+
+
 		return {
 			city: ''
 		}
